@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" value="" id="display">
+    <button onclick="check()">Check</button>
+    <script>
+        function check() {
+            let display = document.getElementById("display").value;
+            checkIMD(display);
+        }
+
+        function checkIMD(value) {
+            regexp = /^[_a-z0-9]{6,}$/
+            if (regexp.test(value)) {
+                return alert("Your account available");
+            }
+            return alert("Your account unavailable");
+        }
+    </script>
+</body>
+
+</html>
