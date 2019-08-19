@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" value="" id="display">
+        <button onclick="check()">Check</button>
+        <script>
+        function check() {
+            let display = document.getElementById("display").value;
+            console.log(display);
+                checkRegexp(display);
+
+            function checkRegexp(value) {
+                let regexp = /^[CAP]+[0-9]{4}[GHIKML]{1}$/
+              if(regexp.test(value)) {
+                  return alert("Name available");
+              }
+              return alert("Name unavailable");
+            }
+        }
+        </script>
+</body>
+</html>
